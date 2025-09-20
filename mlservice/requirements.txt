@@ -1,9 +1,6 @@
 fastapi
 uvicorn
 tensorflow
+scikit-learn
 numpy
-streamlit
-psycopg2-binary
-requests
-sqlalchemy
 pandas
