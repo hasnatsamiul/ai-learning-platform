@@ -1,5 +1,4 @@
 version: "3.8"
-
 services:
   db:
     image: postgres:15
@@ -21,28 +20,21 @@ services:
     depends_on:
       - db
       - mlservice
-    environment:
-      - DB_HOST=db
-      - DB_USER=postgres
-      - DB_PASS=postgres
-      - DB_NAME=learning
-      - ML_SERVICE=http://mlservice:8000
 
   mlservice:
     build: ./mlservice
     ports:
       - "8000:8000"
 
-  frontend:
-    build: ./frontend
+  streamlit:
+    build: .
+    command: streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0
     ports:
-      - "3000:80"
+      - "8501:8501"
     depends_on:
       - backend
-    environment:
-      - REACT_APP_API_URL=/api
-    extra_hosts:
-      - "backend:host-gateway"
+      - db
+      - mlservice
 
 volumes:
-  db_data: {}
+  db_data:
