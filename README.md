@@ -29,7 +29,7 @@ It is very easy to run on your local computer.
 3. git clone "your clone link"
 4. cd ai-learning-platform
 5. docker-compose build --no-cache
-6.docker-compose up
+6. docker-compose up
 
 ### For Live Demo, just open the link
 
@@ -43,3 +43,7 @@ http://0.0.0.0:8501/
 3. ML Service (FastAPI + TensorFlow): http://localhost:8000
 
 4. Database (Postgres): localhost:5432 (user: postgres, password: postgres, db: learning)
+
+
+### Contact
+smhasnats@gmail.com
