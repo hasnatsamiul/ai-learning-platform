@@ -31,7 +31,7 @@ It is very easy to run on your local computer.
 5. docker-compose build --no-cache
 6. docker-compose up
 
-### For Live Demo, just open the link
+### After Docker Compose -- For Live Demo, just open the link
 
 http://0.0.0.0:8501/
 
